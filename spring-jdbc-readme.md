@@ -1,6 +1,15 @@
 # 2022-SpringJDBCTemplate
+
 1. Create maven project
-2. Create pom.xml
+
+2. Update Pom.xml to add following dependencies:
+a. spring-core
+b. spring-context
+c. mysql-connector-java
+d. spring-jdbc
+
+
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
@@ -49,9 +58,11 @@
     
   </dependencies>
   <build>
-    <finalName>SpringMVCPagination</finalName>
+    <finalName>spring-emp-jdbc</finalName>
   </build>
 </project>
+
+
 
 3. Create Emp pojo in com.beans package
 <?xml version="1.0" encoding="UTF-8"?>  
@@ -61,8 +72,6 @@
     xmlns:p="http://www.springframework.org/schema/p"  
     xsi:schemaLocation="http://www.springframework.org/schema/beans  
                 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
- 
- 
 <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
 <property name="driverClassName" value="com.mysql.jdbc.Driver"></property> 
 <property name="url" value="jdbc:mysql://localhost:3306/test?useSSL=false&amp;allowPublicKeyRetrieval=true"></property>  
@@ -78,6 +87,9 @@
 <property name="template" ref="jt"></property>
 </bean>  
 </beans>  
+
+
+
 4. Create EmpDao Class for crud operation
 package com.dao;  
 import java.sql.ResultSet;  
@@ -178,8 +190,6 @@ public class AppMain {
 		}//while
 	}
 }
-
-
 
 
 
