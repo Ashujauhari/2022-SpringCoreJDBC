@@ -1,5 +1,18 @@
 # 2022-SpringJDBCTemplate
+## Problem Statement:
+1. Lot of biolerplate code
+2. Pay attention to Opening / Closing of connection
+3. Handling SQL Exception 
+4. Handle transactions
 
+
+## Apraches to JDBC Template
+1. JdbcTemplate
+2. NamedParameterJdbcTemplate
+3. SimpleJdbcTemplate
+4. SimpleJdbcInsert and SimpleJdbcCall
+
+##Example:
 1. Create maven project
 
 2. Update Pom.xml to add following dependencies:
