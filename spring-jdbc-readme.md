@@ -20,7 +20,7 @@ a. spring-core
 b. spring-context
 c. mysql-connector-java
 d. spring-jdbc
-
+```
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
@@ -85,9 +85,11 @@ d. spring-jdbc
     <finalName>spring-emp-jdbc</finalName>
   </build>
 </project>
+```
 
 
 3. Create Emp pojo in com.beans package
+```
 package com.beans;  
   
 public class Emp {  
@@ -120,6 +122,7 @@ public String getDesignation() {
 public void setDesignation(String designation) {  
     this.designation = designation;  
 }
+```
 @Override
 public String toString() {
 	return "Emp [id=" + id + ", name=" + name + ", salary=" + salary + ", designation=" + designation + "]";
@@ -128,7 +131,7 @@ public String toString() {
   
 }  
 4. Create Benas.xml in src folder
-
+```
 <?xml version="1.0" encoding="UTF-8"?>  
 <beans  
     xmlns="http://www.springframework.org/schema/beans"  
@@ -151,8 +154,10 @@ public String toString() {
 <property name="template" ref="jt"></property>
 </bean>  
 </beans>  
+```
 
 4. Create EmpDao Class for crud operation
+```
 package com.dao;  
 import java.sql.ResultSet;  
 import java.sql.SQLException;  
@@ -207,9 +212,10 @@ public List<Emp> getEmployees(){
     });  
 }  
 }  
+```
 
 5. Create App.javapackage com;
-
+```
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
@@ -253,7 +259,7 @@ public class AppMain {
 	}
 }
 
-
+```
 
 
 
